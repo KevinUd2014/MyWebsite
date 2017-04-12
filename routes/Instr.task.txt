@@ -1,7 +1,11 @@
+Create a script named task.js in routes folder
+
+add following lines
+
 let express = require('express');
 let router = express.Router();
 let mongojs = require('mongojs');
-//LEL
+let db = mongojs('mongodb://<DatabaseName>:<Password>@<The address on the database site>', ['tasks']);
 
 //Get all tasks
 router.get('/tasks', function(req, res, next){
